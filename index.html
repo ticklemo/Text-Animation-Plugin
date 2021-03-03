@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Textillate Plugin - Text Animation</title>
+  <link rel="stylesheet" href="assets/animate.css">
+  <link rel="stylesheet" href="assets/style.css">
+  <!-- 1. this is the plugin css -->
+  <style>
+
+    h1 {
+      font-size: 250px;
+      position: absolute;
+      text-align: center;
+      font-family: sans-serif;
+      top: 15%;
+    }
+
+  </style>
+
+
+</head>
+<body>
+  <!-- 5. this is the plugin markup -->
+  <h1 class="tlt">smile while you still have teeth :)</h1>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!--2. jquery which is needed for most plugins -->
+  <script type="text/javascript" src="assets/jquery.fittext.js"></script>
+  <script type="text/javascript" src="assets/jquery.lettering.js"></script>
+  <!-- 3. plugin files -->
+  <script type="text/javascript" src="assets/jquery.textillate.js"></script>
+
+  <script>
+
+  $(function () {
+    // 4. this is where we call the plugin
+    $('.tlt').textillate({
+      in: {
+        effect: 'flipInX',
+        shuffle: true,
+        callback: function () {
+          alert('hewwo')
+        }
+      },
+      out: {
+        effect: 'hinge',
+        callback: function () {}
+      },
+      // out doesnt work but thats fineeee
+     });
+  })
+
+  </script>
+
+</body>
+</html>
